@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	
+	<!-- JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/scripts.js"></script>
+
+	<title>SMC Clock Utility</title>
+
+</head>
+<body>
+	
+	<div class="container-fluid h-100">
+		<div class="row h-100 justify-content-center align-items-center">
+
+			<!-- Standard Clock -->
+			<div class="col-6">
+				<div class="card">
+					<div class="card-header">Standard Clock</div>
+					<div class="card-body">
+						<figure class="figure">
+							<img src="img/standard_clock.png" alt="Standard Clock" class="img-fluid figure-img">
+							<figcaption class="figure-caption">Sample View of 12 hour format Default Clock</figcaption>
+						</figure>
+						<p class="card-text">Standard clock - available in 12/24 hour formats.</p>
+						<form action="standard_clock.php" method="post" target="_blank">
+							<div class="row text-center">
+								<div class="col">
+									<input type="submit" class="btn btn-primary" name="normalTime" value="Launch (12 Hour Format)">
+								</div>
+								<div class="col">
+									<input type="submit" class="btn btn-primary" name="militaryTime" value="Launch (24 Hour Format)">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- Custom Clock -->
+			<div class="col-6">
+				<div class="card">
+					<div class="card-header">Custom Clock</div>
+					<div class="card-body">
+						<figure class="figure">
+							<img src="img/custom_clock.png" alt="Standard Clock" class="img-fluid figure-img">
+							<figcaption class="figure-caption">Sample View of 12 hour format Custom Clock</figcaption>
+						</figure>
+						<p class="card-text">Custom clock - available in 12/24 hour formats.</p>
+						<div class="row text-center">
+							<div class="col">
+								<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#formClock">Customise Clock</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<!-- Custom Clock Modal Form -->
+	<div class="modal" id="formClock" tabindex="-1" role="dialog" aria-labelledby="formTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<form action="custom_clock.php" method="post" target="_blank">
+					<div class="modal-header">
+						<h5 class="modal-title" id="formTitle">Customise Clock Text</h5>
+						<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group row">
+							<label for="clockTitle" class="col-4 col-form-label">Clock Title:</label>
+							<div class="col">
+								<input type="text" class="form-control" id="clockTitle" name="clockTitle" required>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="startTime" class="col-4 col-form-label">Start Time:</label>
+							<div class="col input-group">
+								<input type="time" class="form-control" id="startTime" name="startTime" required>
+								<div class="input-group-append">
+									<span class="input-group-text">
+										<span class="oi oi-clock"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="45minWarning" class="col-4 col-form-label">45 min Warning:</label>
+							<div class="col input-group">
+								<input type="time" class="form-control" id="45minWarning" name="45minWarning">
+								<div class="input-group-append">
+									<span class="input-group-text">
+										<span class="oi oi-clock"></span>
+									</span>
+								</div>
+								<small class="form-text text-muted">Leave blank if you do not need a 45 minute warning.</small>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="30minWarning" class="col-4 col-form-label">30 min Warning:</label>
+							<div class="col input-group">
+								<input type="time" class="form-control" id="30minWarning" name="30minWarning">
+								<div class="input-group-append">
+									<span class="input-group-text">
+										<span class="oi oi-clock"></span>
+									</span>
+								</div>
+								<small class="form-text text-muted">Leave blank if you do not need a 45 minute warning.</small>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="10minWarning" class="col-4 col-form-label">10 min Warning:</label>
+							<div class="col input-group">
+								<input type="time" class="form-control" id="10minWarning" name="10minWarning">
+								<div class="input-group-append">
+									<span class="input-group-text">
+										<span class="oi oi-clock"></span>
+									</span>
+								</div>
+								<small class="form-text text-muted">Leave blank if you do not need a 45 minute warning.</small>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="finishTime" class="col-4 col-form-label">Finish Time:</label>
+							<div class="col input-group">
+								<input type="time" class="form-control" id="finishTime" name="finishTime" required>
+								<div class="input-group-append">
+									<span class="input-group-text">
+										<span class="oi oi-clock"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col text-center">
+								<button class="btn btn-secondary" type="button" id="calculateTimes" onclick="updateFormTime();">Calculate Warning Times</button>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="container">
+							<div class="row text-center">
+								<div class="col">
+									<input type="submit" class="btn btn-primary" name="normalTime" value="Launch (12 Hour Format)">
+								</div>
+								<div class="col">
+									<input type="submit" class="btn btn-primary" name="militaryTime" value="Launch (24 Hour Format)">
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	
+</body>
+</html>
