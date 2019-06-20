@@ -1,6 +1,11 @@
+
+
 //Bootstrap Imports
 @import "G:\\My Drive\\IT Projects\\Websites\\Source\\bootstrap-4.3.1\\scss\\bootstrap";
 
+
+// Bootstrap Variable Override
+$enable-responsive-font-sizes: true;
 // Custom CSS
 html, body {
 	height: 100%;
@@ -12,11 +17,20 @@ html, body {
 
 #clockDisplay{
 	color: white;
-	font-size: 11rem;
+	font-size: 10vw;
 	// font-weight: 500;
 }
 
 #clockText {
 	color: white;
-	font-size: 12rem;
+	font-family: Calibri;
+	font-weight: bold;
+	.title {
+		font-size: 5vw;
+		// font-weight: bold;
+	}
+	.time-heading {
+		font-size: 48px;
+		font-weight: bold;
+	}
 }
