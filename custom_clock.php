@@ -52,14 +52,14 @@
 					</div>
 					<?php endif; ?>
 
-					<?php if ("" != trim($_POST["45minWarning"])): ?>
+					<?php if ("" != trim($_POST["30minWarning"])): ?>
 					<div class="row py-2">
 						<div class="col-7 h1 display-4 time-heading">30min Warning:</div>
 						<div class="col-5 h1 display-4 text-right time"><?php echo $warn30; ?></div>
 					</div>
 					<?php endif; ?>
 
-					<?php if ("" != trim($_POST["45minWarning"])): ?>
+					<?php if ("" != trim($_POST["10minWarning"])): ?>
 					<div class="row py-2">
 						<div class="col-7 h1 display-4 time-heading">10min Warning:</div>
 						<div class="col-5 h1 display-4 text-right time"><?php echo $warn10; ?></div>
