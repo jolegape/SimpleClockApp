@@ -5,5 +5,5 @@ Simple web based clock built for my school to use during exams. Time can be proj
 Copy files to a PHP capable web server. Simple as that.
 
 **Screenshots**
-![Standard Clock](https://github.com/jolegape/SimpleClockApp/blob/master/img/standard_clock.PNG "Standard Clock")
-![Custom Clock](https://github.com/jolegape/SimpleClockApp/blob/master/img/custom_clock.PNG "Custom Clock")
+![Standard Clock](https://github.com/jolegape/SimpleClockApp/blob/master/img/standard_clock.png "Standard Clock")
+![Custom Clock](https://github.com/jolegape/SimpleClockApp/blob/master/img/custom_clock.png "Custom Clock")
