@@ -2,6 +2,10 @@
 	$clockTitle = $_POST["clockTitle"];
 	if (isset($_POST['normalTime'])) {
 		$militaryTime = false;
+		$customTitle1 = $_POST["customTitle1"];
+		$customTime1 = date("g:i a", strtotime($_POST["customTime1"]));
+		$customTitle2 = $_POST["customTitle2"];
+		$customTime2 = date("g:i a", strtotime($_POST["customTime2"]));
 		$startTime = date("g:i a", strtotime($_POST["startTime"]));
 		$warn45 = date("g:i a", strtotime($_POST["45minWarning"]));
 		$warn30 = date("g:i a", strtotime($_POST["30minWarning"]));
@@ -10,6 +14,10 @@
 	}
 	if (isset($_POST['militaryTime'])) {
 		$militaryTime = true;
+		$customTitle1 = $_POST["customTitle1"];
+		$customTime1 = $_POST["customTime1"];
+		$customTitle2 = $_POST["customTitle2"];
+		$customTime2 = $_POST["customTime2"];
 		$startTime = $_POST["startTime"];
 		$warn45 = $_POST["45minWarning"];
 		$warn30 = $_POST["30minWarning"];
@@ -44,6 +52,20 @@
 						<div class="col-7 h1 display-4 time-heading">Start Time:</div>
 						<div class="col-5 h1 display-4 text-right time"><?php echo $startTime; ?></div>
 					</div>
+
+					<?php if ("" != trim($_POST["customTime1"])): ?>
+					<div class="row py-2">
+						<div class="col-7 h1 display-4 time-heading"><?php echo $customTitle1; ?>:</div>
+						<div class="col-5 h1 display-4 text-right time"><?php echo $customTime1; ?></div>
+					</div>
+					<?php endif; ?>
+
+					<?php if ("" != trim($_POST["customTime2"])): ?>
+					<div class="row py-2">
+						<div class="col-7 h1 display-4 time-heading"><?php echo $customTitle2; ?>:</div>
+						<div class="col-5 h1 display-4 text-right time"><?php echo $customTime2; ?></div>
+					</div>
+					<?php endif; ?>
 					
 					<?php if ("" != trim($_POST["45minWarning"])): ?>
 					<div class="row py-2">
