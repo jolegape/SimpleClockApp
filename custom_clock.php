@@ -48,6 +48,21 @@
 			<div class="col-6" id="clockText">
 				<p class="text-center py-4 title"><?php echo $clockTitle; ?></p>
 				<div class="container">
+
+					<?php if ("" != trim($_POST["customTime1"])): ?>
+					<div class="row py-2">
+						<div class="col-7 h1 display-4 time-heading"><?php echo $customTitle1; ?>:</div>
+						<div class="col-5 h1 display-4 text-right time"><?php echo $customTime1; ?></div>
+					</div>
+					<?php endif; ?>
+
+					<?php if ("" != trim($_POST["customTime2"])): ?>
+					<div class="row py-2">
+						<div class="col-7 h1 display-4 time-heading"><?php echo $customTitle2; ?>:</div>
+						<div class="col-5 h1 display-4 text-right time"><?php echo $customTime2; ?></div>
+					</div>
+					<?php endif; ?>
+
 					<div class="row py-2">
 						<div class="col-7 h1 display-4 time-heading">Start Time:</div>
 						<div class="col-5 h1 display-4 text-right time"><?php echo $startTime; ?></div>
