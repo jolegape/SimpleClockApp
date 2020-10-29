@@ -1,7 +1,7 @@
 
 
 //Bootstrap Imports
-@import "G:\\My Drive\\IT Projects\\Websites\\Source\\bootstrap-4.3.1\\scss\\bootstrap";
+@import "G:\\My Drive\\To sort\\IT Projects\\Websites\\Source\\bootstrap-4.3.1\\scss\\bootstrap";
 
 
 // Bootstrap Variable Override
@@ -15,10 +15,14 @@ html, body {
 	background-color: black;
 }
 
-#clockDisplay{
+h4.customClock{
 	color: white;
 	font-size: 10vw;
-	// font-weight: 500;
+}
+
+h1.standardClock{
+	color: white;
+	font-size: 15vw;
 }
 
 #clockText {
@@ -34,3 +38,4 @@ html, body {
 		font-weight: bold;
 	}
 }
+

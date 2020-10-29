@@ -26,7 +26,7 @@
 	<div class="container-fluid h-100">
 		<div class="row h-100 align-items-center text-center">
 			<div class="col">
-				<h1 class="display-1 font-weight-bold" id="clockDisplay">Text goes here</h1>
+				<h1 class="display-1 font-weight-bold standardClock" id="clockDisplay">Text goes here</h1>
 				<!-- <div id="clockDisplay">Text goes here</div> -->
 			</div>
 		</div>

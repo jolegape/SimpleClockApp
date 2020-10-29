@@ -50,67 +50,53 @@
 				<div class="container">
 
 					<?php if ("" != trim($_POST["customTime1"])): ?>
-					<div class="row py-2">
+					<div class="row py-1">
 						<div class="col-7 h1 display-4 time-heading"><?php echo $customTitle1; ?>:</div>
 						<div class="col-5 h1 display-4 text-right time"><?php echo $customTime1; ?></div>
 					</div>
 					<?php endif; ?>
 
 					<?php if ("" != trim($_POST["customTime2"])): ?>
-					<div class="row py-2">
+					<div class="row py-1">
 						<div class="col-7 h1 display-4 time-heading"><?php echo $customTitle2; ?>:</div>
 						<div class="col-5 h1 display-4 text-right time"><?php echo $customTime2; ?></div>
 					</div>
 					<?php endif; ?>
 
-					<div class="row py-2">
+					<div class="row py-1">
 						<div class="col-7 h1 display-4 time-heading">Start Time:</div>
 						<div class="col-5 h1 display-4 text-right time"><?php echo $startTime; ?></div>
 					</div>
-
-					<?php if ("" != trim($_POST["customTime1"])): ?>
-					<div class="row py-2">
-						<div class="col-7 h1 display-4 time-heading"><?php echo $customTitle1; ?>:</div>
-						<div class="col-5 h1 display-4 text-right time"><?php echo $customTime1; ?></div>
-					</div>
-					<?php endif; ?>
-
-					<?php if ("" != trim($_POST["customTime2"])): ?>
-					<div class="row py-2">
-						<div class="col-7 h1 display-4 time-heading"><?php echo $customTitle2; ?>:</div>
-						<div class="col-5 h1 display-4 text-right time"><?php echo $customTime2; ?></div>
-					</div>
-					<?php endif; ?>
 					
 					<?php if ("" != trim($_POST["45minWarning"])): ?>
-					<div class="row py-2">
+					<div class="row py-1">
 						<div class="col-7 h1 display-4 time-heading">45min Warning:</div>
 						<div class="col-5 h1 display-4 text-right time"><?php echo $warn45; ?></div>
 					</div>
 					<?php endif; ?>
 
 					<?php if ("" != trim($_POST["30minWarning"])): ?>
-					<div class="row py-2">
+					<div class="row py-1">
 						<div class="col-7 h1 display-4 time-heading">30min Warning:</div>
 						<div class="col-5 h1 display-4 text-right time"><?php echo $warn30; ?></div>
 					</div>
 					<?php endif; ?>
 
 					<?php if ("" != trim($_POST["10minWarning"])): ?>
-					<div class="row py-2">
+					<div class="row py-1">
 						<div class="col-7 h1 display-4 time-heading">10min Warning:</div>
 						<div class="col-5 h1 display-4 text-right time"><?php echo $warn10; ?></div>
 					</div>
 					<?php endif; ?>
 
-					<div class="row py-2">
+					<div class="row py-1">
 						<div class="col-7 h1 display-4 time-heading">Finish Time:</div>
 						<div class="col-5 h1 display-4 text-right time"><?php echo $finishTime; ?></div>
 					</div>
 				</div>
 			</div>
 			<div class="col-6">
-				<h4 class="display-4 text-center font-weight-bolder" id="clockDisplay"></h4>
+				<h4 class="display-4 text-center font-weight-bolder customClock" id="clockDisplay"></h4>
 			</div>
 		</div>
 	</div>
